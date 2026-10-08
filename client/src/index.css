@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.page {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #d8dee9;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.form-row input,
+.form-row button,
+.card button {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d8dee9;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.success {
+  color: #166534;
+  font-weight: bold;
+}
+
+.note {
+  color: #475569;
+}
+
+@media (max-width: 760px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
